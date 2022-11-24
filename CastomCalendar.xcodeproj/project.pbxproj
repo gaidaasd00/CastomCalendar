@@ -10,9 +10,11 @@
 		CC8CD158292FD2CA006D88D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CD157292FD2CA006D88D0 /* AppDelegate.swift */; };
 		CC8CD15A292FD2CA006D88D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CD159292FD2CA006D88D0 /* SceneDelegate.swift */; };
 		CC8CD15C292FD2CA006D88D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CD15B292FD2CA006D88D0 /* ViewController.swift */; };
-		CC8CD15F292FD2CA006D88D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8CD15D292FD2CA006D88D0 /* Main.storyboard */; };
 		CC8CD161292FD2CD006D88D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8CD160292FD2CD006D88D0 /* Assets.xcassets */; };
 		CC8CD164292FD2CD006D88D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8CD162292FD2CD006D88D0 /* LaunchScreen.storyboard */; };
+		CC8CD173292FD70B006D88D0 /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CD172292FD70B006D88D0 /* CalendarCollectionView.swift */; };
+		CC8CD175292FDA92006D88D0 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CD174292FDA92006D88D0 /* CalendarCollectionViewCell.swift */; };
+		CC8CD177292FE02D006D88D0 /* CalendarMoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CD176292FE02D006D88D0 /* CalendarMoveButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,12 @@
 		CC8CD157292FD2CA006D88D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8CD159292FD2CA006D88D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC8CD15B292FD2CA006D88D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CC8CD15E292FD2CA006D88D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC8CD160292FD2CD006D88D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC8CD163292FD2CD006D88D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC8CD165292FD2CD006D88D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8CD172292FD70B006D88D0 /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
+		CC8CD174292FDA92006D88D0 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC8CD176292FE02D006D88D0 /* CalendarMoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMoveButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		CC8CD156292FD2CA006D88D0 /* CastomCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				CC8CD157292FD2CA006D88D0 /* AppDelegate.swift */,
-				CC8CD159292FD2CA006D88D0 /* SceneDelegate.swift */,
-				CC8CD15B292FD2CA006D88D0 /* ViewController.swift */,
-				CC8CD15D292FD2CA006D88D0 /* Main.storyboard */,
-				CC8CD160292FD2CD006D88D0 /* Assets.xcassets */,
-				CC8CD162292FD2CD006D88D0 /* LaunchScreen.storyboard */,
-				CC8CD165292FD2CD006D88D0 /* Info.plist */,
+				CC8CD16E292FD599006D88D0 /* Models */,
+				CC8CD16F292FD5B3006D88D0 /* Controllers */,
+				CC8CD16D292FD586006D88D0 /* Views */,
+				CC8CD170292FD5C1006D88D0 /* SupportingFiles */,
+				CC8CD16B292FD56B006D88D0 /* App */,
 			);
 			path = CastomCalendar;
+			sourceTree = "<group>";
+		};
+		CC8CD16B292FD56B006D88D0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CC8CD162292FD2CD006D88D0 /* LaunchScreen.storyboard */,
+				CC8CD165292FD2CD006D88D0 /* Info.plist */,
+				CC8CD157292FD2CA006D88D0 /* AppDelegate.swift */,
+				CC8CD159292FD2CA006D88D0 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CC8CD16D292FD586006D88D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC8CD171292FD6E2006D88D0 /* Cells */,
+				CC8CD172292FD70B006D88D0 /* CalendarCollectionView.swift */,
+				CC8CD176292FE02D006D88D0 /* CalendarMoveButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC8CD16E292FD599006D88D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC8CD16F292FD5B3006D88D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC8CD15B292FD2CA006D88D0 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CC8CD170292FD5C1006D88D0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CC8CD160292FD2CD006D88D0 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CC8CD171292FD6E2006D88D0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CC8CD174292FDA92006D88D0 /* CalendarCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +181,6 @@
 			files = (
 				CC8CD164292FD2CD006D88D0 /* LaunchScreen.storyboard in Resources */,
 				CC8CD161292FD2CD006D88D0 /* Assets.xcassets in Resources */,
-				CC8CD15F292FD2CA006D88D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8CD173292FD70B006D88D0 /* CalendarCollectionView.swift in Sources */,
 				CC8CD15C292FD2CA006D88D0 /* ViewController.swift in Sources */,
+				CC8CD177292FE02D006D88D0 /* CalendarMoveButton.swift in Sources */,
 				CC8CD158292FD2CA006D88D0 /* AppDelegate.swift in Sources */,
 				CC8CD15A292FD2CA006D88D0 /* SceneDelegate.swift in Sources */,
+				CC8CD175292FDA92006D88D0 /* CalendarCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CC8CD15D292FD2CA006D88D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC8CD15E292FD2CA006D88D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CC8CD162292FD2CD006D88D0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,12 +336,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CastomCalendar/Info.plist;
+				INFOPLIST_FILE = CastomCalendar/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +348,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alexgaida.CastomCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,12 +365,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CastomCalendar/Info.plist;
+				INFOPLIST_FILE = CastomCalendar/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +377,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alexgaida.CastomCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
