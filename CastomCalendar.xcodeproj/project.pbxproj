@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC72CADB293125FD008B15F6 /* MonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72CADA293125FD008B15F6 /* MonthLabel.swift */; };
+		CC72CADE2931290A008B15F6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72CADD2931290A008B15F6 /* Date+Extensions.swift */; };
+		CC72CAE0293129F7008B15F6 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72CADF293129F7008B15F6 /* CalendarModel.swift */; };
+		CC72CAE229312ADD008B15F6 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72CAE129312ADD008B15F6 /* DateModel.swift */; };
+		CC72CAE429313D01008B15F6 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72CAE329313D01008B15F6 /* String+Extensions.swift */; };
 		CC8CD158292FD2CA006D88D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CD157292FD2CA006D88D0 /* AppDelegate.swift */; };
 		CC8CD15A292FD2CA006D88D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CD159292FD2CA006D88D0 /* SceneDelegate.swift */; };
 		CC8CD15C292FD2CA006D88D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CD15B292FD2CA006D88D0 /* ViewController.swift */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC72CADA293125FD008B15F6 /* MonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthLabel.swift; sourceTree = "<group>"; };
+		CC72CADD2931290A008B15F6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		CC72CADF293129F7008B15F6 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		CC72CAE129312ADD008B15F6 /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
+		CC72CAE329313D01008B15F6 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		CC8CD154292FD2CA006D88D0 /* CastomCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastomCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8CD157292FD2CA006D88D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8CD159292FD2CA006D88D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC72CADC293128BA008B15F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC72CADD2931290A008B15F6 /* Date+Extensions.swift */,
+				CC72CAE329313D01008B15F6 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CC8CD14B292FD2CA006D88D0 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +82,7 @@
 				CC8CD16E292FD599006D88D0 /* Models */,
 				CC8CD16F292FD5B3006D88D0 /* Controllers */,
 				CC8CD16D292FD586006D88D0 /* Views */,
+				CC72CADC293128BA008B15F6 /* Extensions */,
 				CC8CD170292FD5C1006D88D0 /* SupportingFiles */,
 				CC8CD16B292FD56B006D88D0 /* App */,
 			);
@@ -86,6 +106,7 @@
 				CC8CD171292FD6E2006D88D0 /* Cells */,
 				CC8CD172292FD70B006D88D0 /* CalendarCollectionView.swift */,
 				CC8CD176292FE02D006D88D0 /* CalendarMoveButton.swift */,
+				CC72CADA293125FD008B15F6 /* MonthLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -93,6 +114,8 @@
 		CC8CD16E292FD599006D88D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CC72CADF293129F7008B15F6 /* CalendarModel.swift */,
+				CC72CAE129312ADD008B15F6 /* DateModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,8 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC8CD173292FD70B006D88D0 /* CalendarCollectionView.swift in Sources */,
+				CC72CAE429313D01008B15F6 /* String+Extensions.swift in Sources */,
+				CC72CAE0293129F7008B15F6 /* CalendarModel.swift in Sources */,
+				CC72CADE2931290A008B15F6 /* Date+Extensions.swift in Sources */,
 				CC8CD15C292FD2CA006D88D0 /* ViewController.swift in Sources */,
 				CC8CD177292FE02D006D88D0 /* CalendarMoveButton.swift in Sources */,
+				CC72CAE229312ADD008B15F6 /* DateModel.swift in Sources */,
+				CC72CADB293125FD008B15F6 /* MonthLabel.swift in Sources */,
 				CC8CD158292FD2CA006D88D0 /* AppDelegate.swift in Sources */,
 				CC8CD15A292FD2CA006D88D0 /* SceneDelegate.swift in Sources */,
 				CC8CD175292FDA92006D88D0 /* CalendarCollectionViewCell.swift in Sources */,

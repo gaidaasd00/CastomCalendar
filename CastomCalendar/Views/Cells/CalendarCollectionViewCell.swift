@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CalendarCollectionViewCell: UICollectionViewCell {
+class CalendarCollectionViewCell: UICollectionViewCell {    
     private let dayOfWeekLabel: UILabel = {
         let label = UILabel()
         label.text = "ЧТ"
-        label.textColor = .red
+        label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -26,6 +26,20 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    override var isSelected: Bool {
+        didSet {
+            if self.isSelected {
+                backgroundColor = .orange
+                dayOfWeekLabel.textColor = .black
+                numberOfDayLabel.textColor = .white
+            } else {
+                backgroundColor = .red
+                dayOfWeekLabel.textColor = .black
+                numberOfDayLabel.textColor = .white
+            }
+        }
+    }
     
     static let idCalendarCell = "idCell"
     
@@ -45,6 +59,11 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         
         addSubview(dayOfWeekLabel)
         addSubview(numberOfDayLabel)
+    }
+    
+    public func configure(_ model: DateModel) {
+        dayOfWeekLabel.text = model.dayOfWeek
+        numberOfDayLabel.text = model.numberOfDay
     }
 }
 

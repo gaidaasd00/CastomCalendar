@@ -4,10 +4,18 @@
 //
 //  Created by Alexey Gaidykov on 24.11.2022.
 //
+protocol CalendarProtocol: AnyObject {
+    func maxOffsetLeft()
+    func maxOffsetRight()
+}
 
 import UIKit
 
 class CalendarCollectionView: UICollectionView {
+    weak var calendarDelegate: CalendarProtocol?
+    
+    private var daysArray = [DateModel]()
+
     private let collectionLayout = UICollectionViewFlowLayout()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -39,12 +47,24 @@ class CalendarCollectionView: UICollectionView {
         delegate = self
         dataSource = self
     }
+    public func setDaysArray(_ array: [DateModel]) {
+        daysArray = array
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.x < 3 {
+            calendarDelegate?.maxOffsetLeft()
+        }
+        
+        if scrollView.contentOffset.x > self.frame.width * 2 {
+            calendarDelegate?.maxOffsetRight()
+        }
+    }
 }
 
 //MARK: Extension - UICollectionViewDataSource
 extension CalendarCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        7
+        daysArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -52,6 +72,13 @@ extension CalendarCollectionView: UICollectionViewDataSource {
             withReuseIdentifier: CalendarCollectionViewCell.idCalendarCell,
             for: indexPath
         ) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
+        
+        if daysArray[indexPath.row].dateString == Date().dateFormatddMMyyyy() {
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
+        }
+        
+        let dateModel = daysArray[indexPath.row]
+        cell.configure(dateModel)
         return cell
     }
 }
